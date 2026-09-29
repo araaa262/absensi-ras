@@ -1,0 +1,130 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dashboard • Absensi X TKJ</title><link rel="stylesheet" href="/assets/style.css">
+<style id="premium-glass-v5">
+:root{
+  --bg:#070b14;
+  --panel:rgba(18,24,38,.56);
+  --panel2:rgba(255,255,255,.065);
+  --line:rgba(255,255,255,.105);
+  --line2:rgba(255,255,255,.16);
+  --text:#f5f7ff;
+  --muted:#9ca8bb;
+  --purple:#9b8cff;
+  --blue:#69c9ff;
+  --mint:#73e0b0;
+  --danger:#ff7f9d;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0!important;
+  min-height:100vh;
+  color:var(--text)!important;
+  background:
+    radial-gradient(800px 520px at 4% -5%,rgba(155,140,255,.18),transparent 62%),
+    radial-gradient(720px 520px at 105% 8%,rgba(105,201,255,.13),transparent 62%),
+    radial-gradient(700px 500px at 55% 110%,rgba(115,224,176,.065),transparent 65%),
+    linear-gradient(145deg,#050812,#09101e 52%,#070b14)!important;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  opacity:.32;
+  background-image:
+    linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:52px 52px;
+  mask-image:linear-gradient(to bottom,black,transparent 88%);
+}
+.glass,.card,.panel,.modal,.navbar,.sidebar,.stat,.box,.container-card{
+  background:
+    linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.025)),
+    var(--panel)!important;
+  border:1px solid var(--line)!important;
+  border-radius:26px!important;
+  backdrop-filter:blur(30px) saturate(145%)!important;
+  -webkit-backdrop-filter:blur(30px) saturate(145%)!important;
+  box-shadow:
+    0 26px 70px rgba(0,0,0,.28),
+    inset 0 1px 0 rgba(255,255,255,.10)!important;
+}
+.navbar{
+  border-radius:20px!important;
+  box-shadow:0 18px 55px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.13)!important;
+}
+h1,h2,h3,h4{
+  letter-spacing:-.035em!important;
+  line-height:1.08!important;
+}
+p{line-height:1.65}
+button,.btn{
+  min-height:44px;
+  border-radius:15px!important;
+  border:1px solid rgba(255,255,255,.16)!important;
+  background:linear-gradient(135deg,rgba(155,140,255,.94),rgba(105,201,255,.78))!important;
+  box-shadow:0 12px 32px rgba(100,100,255,.18),inset 0 1px 0 rgba(255,255,255,.26)!important;
+  transition:transform .2s ease,box-shadow .2s ease,filter .2s ease!important;
+}
+button:hover,.btn:hover{
+  transform:translateY(-2px)!important;
+  filter:brightness(1.06);
+  box-shadow:0 18px 40px rgba(100,100,255,.25),inset 0 1px 0 rgba(255,255,255,.3)!important;
+}
+button:active,.btn:active{transform:scale(.98)!important}
+input,select,textarea{
+  min-height:44px;
+  border-radius:15px!important;
+  color:var(--text)!important;
+  background:rgba(2,6,14,.28)!important;
+  border:1px solid var(--line)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.035)!important;
+}
+input:focus,select:focus,textarea:focus{
+  border-color:rgba(155,140,255,.65)!important;
+  box-shadow:0 0 0 4px rgba(155,140,255,.10)!important;
+}
+.badge,.status,.pill{
+  border:1px solid var(--line)!important;
+  background:rgba(255,255,255,.055)!important;
+  border-radius:999px!important;
+  backdrop-filter:blur(15px)!important;
+}
+.qr,.qr-container{
+  padding:22px!important;
+  border-radius:28px!important;
+  background:rgba(255,255,255,.97)!important;
+  box-shadow:0 30px 80px rgba(0,0,0,.34),0 0 80px rgba(155,140,255,.12)!important;
+}
+table{border-collapse:separate!important;border-spacing:0 7px!important}
+tbody tr{transition:transform .18s ease,background .18s ease}
+tbody tr:hover{transform:translateY(-1px);background:rgba(255,255,255,.025)}
+small,.muted,.text-muted{color:var(--muted)!important}
+@media(max-width:760px){
+  .card,.panel,.modal,.stat,.box,.container-card{border-radius:21px!important}
+  .navbar{border-radius:16px!important}
+  body{background-attachment:scroll}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{scroll-behavior:auto!important;transition:none!important}
+}
+</style>
+
+</head><body>
+
+<div class="v5-ambient" aria-hidden="true">
+  <i></i><i></i><i></i>
+</div>
+<style>
+.v5-ambient{position:fixed;inset:0;pointer-events:none;z-index:-1;overflow:hidden}
+.v5-ambient i{position:absolute;display:block;border-radius:50%;filter:blur(85px);opacity:.18}
+.v5-ambient i:nth-child(1){width:280px;height:280px;left:-90px;top:22%;background:#9b8cff;animation:v5a 13s ease-in-out infinite alternate}
+.v5-ambient i:nth-child(2){width:240px;height:240px;right:-70px;top:48%;background:#69c9ff;animation:v5b 16s ease-in-out infinite alternate}
+.v5-ambient i:nth-child(3){width:220px;height:220px;left:44%;bottom:-100px;background:#73e0b0;animation:v5c 18s ease-in-out infinite alternate}
+@keyframes v5a{to{transform:translate(55px,-30px)}}
+@keyframes v5b{to{transform:translate(-45px,35px)}}
+@keyframes v5c{to{transform:translate(25px,-40px)}}
+</style>
+<div class="shell"><nav class="nav"><div class="brand"><div class="logo">AT</div><div><b>Absensi X TKJ</b><small>Liquid Glass</small></div></div><div class="links"><a data-nav="home" href="/">Dashboard</a><a data-nav="sesi" href="/sesi.html">Sesi QR</a><a data-nav="data" href="/data.html">Data Absensi</a><a data-nav="pengaturan" href="/pengaturan.html">Pengaturan</a></div><div class="mobileNav"><a data-nav="home" href="/">Dashboard</a><a data-nav="sesi" href="/sesi.html">QR</a><a data-nav="data" href="/data.html">Data</a><a data-nav="pengaturan" href="/pengaturan.html">Pengaturan</a></div></nav><main class="page"><section class="glass hero"><span class="eyebrow">Dashboard Kelas</span><h1>Absensi yang simpel.<br>Terlihat modern.</h1><p>Kelola sesi QR, lihat kehadiran siswa, dan pantau statistik kelas dari halaman yang terpisah dan lebih rapi.</p><div class="actions"><a class="btn" href="/sesi.html">Buat Sesi QR</a><a class="btn secondary" href="/data.html">Lihat Data</a></div></section><section class="grid grid3 section"><div class="glass card stat"><span class="muted">Hadir hari ini</span><b id="hadir">—</b></div><div class="glass card stat"><span class="muted">Izin hari ini</span><b id="izin">—</b></div><div class="glass card stat"><span class="muted">Sakit hari ini</span><b id="sakit">—</b></div></section><section class="grid grid2 section"><div class="glass card"><h2>Sesi QR</h2><p class="muted">Buat QR khusus untuk satu sesi absensi.</p><div class="actions"><a class="btn" href="/sesi.html">Kelola Sesi</a></div></div><div class="glass card"><h2>Halaman Siswa</h2><p class="muted">Siswa membuka link dari QR lalu mengisi data absensi.</p><div class="actions"><a class="btn secondary" href="/absen.html">Buka Halaman Absen</a></div></div></section></main><div class="footer">Absensi X TKJ • Liquid Glass UI</div></div><script src="/assets/app.js"></script><script>nav('home');async function load(){if(!adminPassword){['hadir','izin','sakit'].forEach(id=>$(id).textContent='Login');return}try{const d=await api('/api/stats');$('hadir').textContent=d.hadir;$('izin').textContent=d.izin;$('sakit').textContent=d.sakit}catch(e){['hadir','izin','sakit'].forEach(id=>$(id).textContent='—')}}load();</script></body></html>

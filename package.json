@@ -1,0 +1,8 @@
+{
+  "name": "absensi-kelas-liquid-glass",
+  "version": "1.0.0",
+  "description": "Website absensi kelas berbasis QR Code dengan Liquid Glass UI dan Resend",
+  "main": "server.js",
+  "scripts": {"start":"node server.js","dev":"node --watch server.js"},
+  "dependencies": {"dotenv":"^16.4.7","express":"^4.21.2","qrcode":"^1.5.4","resend":"^6.0.0"}
+}
